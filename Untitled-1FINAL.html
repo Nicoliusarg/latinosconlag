@@ -12,14 +12,14 @@
             color: #fff;
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #000; /* Fondo negro */
+            background-color: #000;
             overflow: hidden;
         }
 
-        /* Fondo con imagen de humo */
+        /* Fondo con imagen de humo y mezcla */
         body::before {
             content: "";
-            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200') no-repeat center center fixed;
+            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
             background-size: cover;
             position: fixed;
             top: 0;
@@ -29,18 +29,47 @@
             opacity: 0.15;
             mix-blend-mode: screen;
             z-index: -1;
+            background-attachment: fixed;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #111;
+            padding: 10px 0;
+            box-shadow: 0 0 10px #000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
         }
 
         /* Imagen del logo */
         .logo {
             width: 300px;
+            height: auto;
             margin-top: 20px;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 190, 255, 0.8);
+            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
         }
 
         h1 {
             font-size: 3em;
+            margin-top: 10px;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
         }
 
@@ -50,7 +79,7 @@
             width: 80%;
         }
 
-        /* Sección de botones */
+        /* Botones */
         .buttons a {
             display: inline-flex;
             align-items: center;
@@ -64,87 +93,100 @@
             font-size: 1.2em;
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
-
+        .buttons a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
         .buttons a:hover {
             background-color: #0056b3;
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Sección de la guild */
-        .guild-info {
-            margin-top: 30px;
-            background: rgba(0, 0, 0, 0.7);
+        /* Secciones */
+        section {
+            margin: 50px auto;
             padding: 20px;
-            border-radius: 10px;
+            width: 80%;
+            background: rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease;
         }
 
-        .guild-info h2 {
+        h2 {
+            font-size: 2.5em;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
         }
 
-        .guild-info p {
-            font-size: 1em;
-            margin: 5px 0;
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Animación */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <!-- Imagen principal -->
-    <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
-         alt="Latinos con Lag Logo" 
-         class="logo">
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
+    <!-- Imagen principal -->
+    <a href="https://ibb.co/Jnx8cGc" target="_blank">
+        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
+             alt="Latinos con Lag Logo" 
+             class="logo">
+    </a>
     <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
     
-    <!-- Botones con enlaces -->
+    <!-- Botones con íconos -->
     <div class="buttons">
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">Unite al WhatsApp</a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">Unite al Discord</a>
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag" target="_blank">Unite a la Guild</a>
+        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
+        </a>
+        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
+        </a>
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Unite a la Guild
+        </a>
     </div>
 
-    <!-- Información de la guild -->
-    <div class="guild-info">
-        <h2>Información de la Guild</h2>
-        <p id="guild-name">Nombre: Cargando...</p>
-        <p id="guild-realm">Reino: Cargando...</p>
-        <p id="guild-members">Miembros: Cargando...</p>
-        <p id="guild-achievements">Logros: Cargando...</p>
-    </div>
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <h2>Quiénes Somos</h2>
+        <p>Somos <strong>Latinos con Lag</strong>, una guild orientada a la diversión y compañerismo. Realizamos actividades en PvE, organizamos raids y nos ayudamos mutuamente a mejorar en <em>World of Warcraft</em>. ¡Todos son bienvenidos!</p>
+    </section>
 
-    <script>
-        // Token de acceso obtenido
-        const accessToken = "USa4Rs3XL11HavdXmoyPCHtm9umMNFq70l";
+    <!-- Sección Actividades -->
+    <section id="actividades">
+        <h2>Actividades</h2>
+        <div style="display: flex; justify-content: center; overflow-x: auto;">
+            <img src="https://via.placeholder.com/300x200" alt="Raid" style="margin: 10px; border-radius: 10px;">
+            <img src="https://via.placeholder.com/300x200" alt="PvP" style="margin: 10px; border-radius: 10px;">
+            <img src="https://via.placeholder.com/300x200" alt="Logros" style="margin: 10px; border-radius: 10px;">
+        </div>
+    </section>
 
-        // URL de la API
-        const apiURL = "https://us.api.blizzard.com/data/wow/guild/ragnaros/latinos%20con%20lag?namespace=profile-us&locale=es_MX&access_token=" + accessToken;
-
-        // Función para obtener y mostrar la información de la guild
-        async function fetchGuildInfo() {
-            try {
-                const response = await fetch(apiURL);
-                if (!response.ok) {
-                    throw new Error("Error al obtener la información de la guild");
-                }
-
-                const data = await response.json();
-
-                // Mostrar información en la página
-                document.getElementById("guild-name").textContent = `Nombre: ${data.name}`;
-                document.getElementById("guild-realm").textContent = `Reino: ${data.realm.name}`;
-                document.getElementById("guild-members").textContent = `Miembros: ${data.member_count}`;
-                document.getElementById("guild-achievements").textContent = `Logros: ${data.achievement_points}`;
-            } catch (error) {
-                console.error(error);
-                document.querySelector(".guild-info").innerHTML = "<p style='color: red;'>Error al cargar la información de la guild.</p>";
-            }
-        }
-
-        // Llamar a la función al cargar la página
-        fetchGuildInfo();
-    </script>
+    <!-- Footer -->
+    <footer id="contacto">
+        <p>📧 Contacto: <a href="mailto:latinosconlag@wowguild.com" style="color: #007BFF;">latinosconlag@wowguild.com</a></p>
+        <p>&copy; 2024 Latinos con Lag | Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
 
