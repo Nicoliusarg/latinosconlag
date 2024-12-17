@@ -27,9 +27,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15; /* Ajusta la opacidad del humo */
-            mix-blend-mode: screen; /* Mezcla la imagen con el fondo oscuro */
-            z-index: -1; /* Detrás del contenido */
+            opacity: 0.15;
+            mix-blend-mode: screen;
+            z-index: -1;
         }
 
         /* Imagen del logo */
@@ -78,6 +78,21 @@
             background-color: #0056b3;
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
+
+        /* Contenedor de la Guild */
+        #roster {
+            margin-top: 30px;
+            color: #fff;
+        }
+
+        #roster h2 {
+            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
+        #roster p {
+            font-size: 1em;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
@@ -95,13 +110,46 @@
         <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
         </a>
-        <a href="https://discord.gg/AGDpUBX5" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
+        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" style="filter: brightness(0.7) contrast(1.2);">Unite al Discord
         </a>
-        <a href="https://battle.net/wow-guild-link" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Battle.net">Unite a la Guild
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="width: 24px; height: 24px; border-radius: 50%;">Unite a la Guild
         </a>
     </div>
+
+    <!-- Contenedor de la información de la Guild -->
+    <div id="roster">
+        <h2>Miembros de la Guild</h2>
+        <p>Cargando...</p>
+    </div>
+
+    <!-- Script para obtener datos de la API -->
+    <script>
+        const accessToken = "USa4Rs3XL11HavdXmoyPCHtm9umMNFq70l"; // Token de acceso obtenido
+        const guildAPI = "https://us.api.blizzard.com/data/wow/guild/ragnaros/latinos-con-lag/roster?namespace=profile-us&locale=es_MX&access_token=" + accessToken;
+
+        async function fetchGuildRoster() {
+            try {
+                const response = await fetch(guildAPI);
+                const data = await response.json();
+
+                const rosterDiv = document.getElementById("roster");
+                rosterDiv.innerHTML = "<h2>Miembros de la Guild</h2>";
+
+                data.members.forEach(member => {
+                    const name = member.character.name;
+                    const level = member.character.level;
+                    rosterDiv.innerHTML += `<p>${name} - Nivel ${level}</p>`;
+                });
+            } catch (error) {
+                console.error("Error al obtener los datos de la guild:", error);
+                document.getElementById("roster").innerHTML = "<p>Error al cargar la información.</p>";
+            }
+        }
+
+        fetchGuildRoster();
+    </script>
 </body>
 </html>
 
