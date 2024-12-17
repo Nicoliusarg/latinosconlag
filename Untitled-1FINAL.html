@@ -13,7 +13,7 @@
             text-align: center;
             font-family: Arial, sans-serif;
             position: relative;
-            background-color: #000; /* Fondo negro */
+            background-color: #000;
             overflow: hidden;
         }
 
@@ -79,19 +79,11 @@
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Contenedor de la Guild */
-        #roster {
-            margin-top: 30px;
-            color: #fff;
-        }
-
-        #roster h2 {
-            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        #roster p {
-            font-size: 1em;
-            margin: 5px;
+        /* Información de la Guild */
+        #guild-info {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1em;
         }
     </style>
 </head>
@@ -111,44 +103,53 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
         </a>
         <a href="https://discord.gg/zPuPq77CcD" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" style="filter: brightness(0.7) contrast(1.2);">Unite al Discord
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" 
+                 alt="Discord" 
+                 style="filter: brightness(0.7) contrast(1.2);">Unite al Discord
         </a>
         <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
-            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="width: 24px; height: 24px; border-radius: 50%;">Unite a la Guild
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" 
+                 alt="Guild Icon" 
+                 style="border-radius: 50%;">Unite a la Guild
         </a>
     </div>
 
-    <!-- Contenedor de la información de la Guild -->
-    <div id="roster">
-        <h2>Miembros de la Guild</h2>
-        <p>Cargando...</p>
+    <!-- Contenedor para la información de la Guild -->
+    <div id="guild-info">
+        Cargando información de la Guild...
     </div>
 
     <!-- Script para obtener datos de la API -->
     <script>
-        const accessToken = "USa4Rs3XL11HavdXmoyPCHtm9umMNFq70l"; // Token de acceso obtenido
-        const guildAPI = "https://us.api.blizzard.com/data/wow/guild/ragnaros/latinos-con-lag/roster?namespace=profile-us&locale=es_MX&access_token=" + accessToken;
+        const accessToken = "USa4Rs3XL11HavdXmoyPCHtm9umMNFq70l";
+        const guildName = "Latinos%20con%20Lag";
+        const realm = "ragnaros";
+        const region = "us";
 
-        async function fetchGuildRoster() {
+        // Función para obtener información de la Guild
+        async function fetchGuildData() {
+            const apiUrl = `https://${region}.api.blizzard.com/data/wow/guild/${realm}/${guildName}?namespace=profile-${region}&locale=es_MX&access_token=${accessToken}`;
+
             try {
-                const response = await fetch(guildAPI);
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error("Error al cargar la información de la guild.");
+
                 const data = await response.json();
 
-                const rosterDiv = document.getElementById("roster");
-                rosterDiv.innerHTML = "<h2>Miembros de la Guild</h2>";
-
-                data.members.forEach(member => {
-                    const name = member.character.name;
-                    const level = member.character.level;
-                    rosterDiv.innerHTML += `<p>${name} - Nivel ${level}</p>`;
-                });
+                // Mostrar datos básicos en el HTML
+                document.getElementById("guild-info").innerHTML = `
+                    <h2>${data.name} - Servidor: ${data.realm.name}</h2>
+                    <p>Facción: ${data.faction.type === "HORDE" ? "Horda" : "Alianza"}</p>
+                    <p>Creación: ${new Date(data.created_timestamp).toLocaleDateString()}</p>
+                `;
             } catch (error) {
-                console.error("Error al obtener los datos de la guild:", error);
-                document.getElementById("roster").innerHTML = "<p>Error al cargar la información.</p>";
+                console.error(error);
+                document.getElementById("guild-info").innerText = "Error al cargar la información.";
             }
         }
 
-        fetchGuildRoster();
+        // Llama a la función al cargar la página
+        fetchGuildData();
     </script>
 </body>
 </html>
