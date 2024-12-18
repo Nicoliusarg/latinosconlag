@@ -13,23 +13,23 @@
             text-align: center;
             font-family: Arial, sans-serif;
             position: relative;
-            background-color: #000;
-            overflow-y: auto; /* Permitir scroll vertical */
+            background-color: #000; /* Fondo negro */
+            overflow: hidden;
         }
 
         /* Fondo con imagen de humo y mezcla */
         body::before {
             content: "";
-            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200') no-repeat center center fixed;
+            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
             background-size: cover;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15;
-            mix-blend-mode: screen;
-            z-index: -1;
+            opacity: 0.15; /* Ajusta la opacidad del humo */
+            mix-blend-mode: screen; /* Mezcla la imagen con el fondo oscuro */
+            z-index: -1; /* Detrás del contenido */
         }
 
         /* Imagen del logo */
@@ -80,24 +80,19 @@
         }
 
         /* Nuevas Secciones */
-        section {
-            margin: 50px auto;
+        .section {
+            margin: 40px auto;
             padding: 20px;
-            width: 80%;
             background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
+            width: 80%;
             border-radius: 10px;
-            animation: fadeIn 1.5s ease;
+            box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
         }
 
         h2 {
             font-size: 2.5em;
+            margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -119,34 +114,34 @@
         <a href="https://discord.gg/zPuPq77CcD" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
         </a>
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag" target="_blank">
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
             <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Unite a la Guild
         </a>
     </div>
 
     <!-- Sección Quiénes Somos -->
-    <section>
+    <div class="section">
         <h2>Quiénes Somos 😊</h2>
-        <p>🌟 Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía. 🎮</p>
-        <p>🛑 Nos orientamos a <strong>todo tipo de público</strong> y damos la bienvenida a quienes quieran <strong>crear contenido</strong>.</p>
-        <p>⚔️ Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! 🛡️</p>
-    </section>
+        <p>🌟 Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en compañía.</p>
+        <p>🎮 Estamos orientados a <strong>todo tipo de público</strong>. A quienes quieran pertenecer, divertirse y crear contenido. 🚀</p>
+        <p>🛑 Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
+    </div>
 
-    <!-- Nueva Sección Reclutamiento -->
-    <section>
+    <!-- Sección Reclutamiento -->
+    <div class="section">
         <h2>🎯 ¡Pide Acceder a la Guild!</h2>
         <div class="buttons">
             <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Nueva Sección Estadísticas -->
-    <section>
+    <!-- Sección Estadísticas -->
+    <div class="section">
         <h2>📊 Estadísticas de la Guild</h2>
         <div class="buttons">
             <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
             <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
         </div>
-    </section>
+    </div>
 </body>
 </html>
