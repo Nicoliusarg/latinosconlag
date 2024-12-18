@@ -14,8 +14,7 @@
             font-family: Arial, sans-serif;
             position: relative;
             background-color: #000; /* Fondo negro */
-            min-height: 100vh; /* Asegurar altura completa */
-            overflow-y: scroll; /* Forzar la barra desplazadora */
+            overflow-y: auto; /* Permitir desplazamiento vertical */
         }
 
         /* Fondo con imagen de humo y mezcla */
@@ -28,14 +27,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15;
-            mix-blend-mode: screen;
-            z-index: -1;
+            opacity: 0.15; /* Ajusta la opacidad del humo */
+            mix-blend-mode: screen; /* Mezcla la imagen con el fondo oscuro */
+            z-index: -1; /* Detrás del contenido */
         }
 
         /* Imagen del logo */
         .logo {
             width: 300px;
+            height: auto;
             margin-top: 20px;
             border-radius: 15px;
             box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
@@ -43,6 +43,7 @@
 
         h1 {
             font-size: 3em;
+            margin-top: 10px;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
         }
 
@@ -77,22 +78,6 @@
             background-color: #0056b3;
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
-
-        /* Nuevas Secciones */
-        .section {
-            margin: 40px auto;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.8);
-            width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
-        }
-
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
     </style>
 </head>
 <body>
@@ -116,31 +101,18 @@
                  style="width: 24px; height: 24px; filter: brightness(0.7) contrast(1.2); margin-right: 10px;">
             Unite al Discord
         </a>
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" 
+                 style="width: 24px; height: 24px; border-radius: 50%; margin-right: 10px;">Ver Guild
+        </a>
     </div>
 
     <!-- Sección Quiénes Somos -->
     <div class="section">
-        <h2>Quiénes Somos 😊</h2>
-        <p>🌟 Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en compañía.</p>
-        <p>🎮 Estamos orientados a <strong>todo tipo de público</strong>. A quienes quieran pertenecer, divertirse y crear contenido. 🚀</p>
-        <p>🛑 Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
-    </div>
-
-    <!-- Sección Reclutamiento -->
-    <div class="section">
-        <h2>🎯 ¡Pide Acceder a la Guild!</h2>
-        <div class="buttons">
-            <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
-        </div>
-    </div>
-
-    <!-- Sección Estadísticas -->
-    <div class="section">
-        <h2>📊 Estadísticas de la Guild</h2>
-        <div class="buttons">
-            <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
-            <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
-        </div>
+        <h2>⚖️ Quiénes Somos</h2>
+        <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
+        <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
+        <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
     </div>
 </body>
 </html>
