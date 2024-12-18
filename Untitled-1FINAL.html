@@ -13,13 +13,13 @@
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #000;
-            overflow-y: auto; /* Permitir desplazamiento vertical */
+            overflow-y: auto; /* Permitir scroll */
         }
 
-        /* Fondo con imagen de humo y mezcla */
+        /* Fondo con imagen de humo */
         body::before {
             content: "";
-            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
+            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200') no-repeat center center fixed;
             background-size: cover;
             position: fixed;
             top: 0;
@@ -29,7 +29,6 @@
             opacity: 0.15;
             mix-blend-mode: screen;
             z-index: -1;
-            background-attachment: fixed;
         }
 
         /* Navegación */
@@ -43,10 +42,10 @@
         }
         nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
+            padding: 0;
+            margin: 0;
         }
         nav ul li {
             margin: 0 20px;
@@ -55,55 +54,9 @@
             color: #fff;
             text-decoration: none;
             font-size: 1.2em;
-            transition: color 0.3s ease;
         }
         nav ul li a:hover {
             color: #007BFF;
-        }
-
-        /* Imagen del logo */
-        .logo {
-            width: 300px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-top: 10px;
-            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        /* Botones */
-        .buttons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-        .buttons a img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-        .buttons a:hover {
-            background-color: #0056b3;
-            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
         /* Secciones */
@@ -120,6 +73,31 @@
         h2 {
             font-size: 2.5em;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        /* Botones */
+        .buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
         /* Footer */
@@ -142,46 +120,42 @@
     <nav>
         <ul>
             <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#recruitment">Reclutamiento</a></li>
+            <li><a href="#estadisticas">Estadísticas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Imagen principal -->
-    <a href="https://ibb.co/Jnx8cGc" target="_blank">
-        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
-             alt="Latinos con Lag Logo" 
-             class="logo">
-    </a>
+    <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
+         alt="Latinos con Lag Logo" 
+         class="logo">
+
     <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
-    
-    <!-- Botones con íconos -->
-    <div class="buttons">
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
-        </a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
-        </a>
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag" target="_blank">
-            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Unite a la Guild
-        </a>
-    </div>
 
     <!-- Sección Sobre Nosotros -->
     <section id="sobre-nosotros">
-        <h2>Quiénes Somos</h2>
-        <p>Somos <strong>Latinos con Lag</strong>, una guild orientada a la diversión y compañerismo. Realizamos actividades en PvE, organizamos raids y nos ayudamos mutuamente a mejorar en <em>World of Warcraft</em>. ¡Todos son bienvenidos!</p>
+        <h2>Quiénes Somos 😊</h2>
+        <p>🌟 Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía. Nos orientamos a <strong>todo tipo de público</strong> 🎮.</p>
+        <p>🎥 ¡Aquellos que quieran <strong>crear contenido</strong> también son bienvenidos!</p>
+        <p>🛑 Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Juntos podemos divertirnos y mejorar cada día! ⚔️</p>
     </section>
 
-    <!-- Sección Actividades -->
-    <section id="actividades">
-        <h2>Actividades</h2>
-        <div style="display: flex; justify-content: center; overflow-x: auto;">
-            <img src="https://via.placeholder.com/300x200" alt="Raid" style="margin: 10px; border-radius: 10px;">
-            <img src="https://via.placeholder.com/300x200" alt="PvP" style="margin: 10px; border-radius: 10px;">
-            <img src="https://via.placeholder.com/300x200" alt="Logros" style="margin: 10px; border-radius: 10px;">
+    <!-- Sección Reclutamiento -->
+    <section id="recruitment">
+        <h2>🎯 ¡Pide Acceder a la Guild!</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section id="estadisticas">
+        <h2>📊 Estadísticas de la Guild</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
+            <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
         </div>
     </section>
 
@@ -192,13 +166,4 @@
     </footer>
 </body>
 </html>
-
-</body>
-</html>
-
-
-
-
-
-
 
