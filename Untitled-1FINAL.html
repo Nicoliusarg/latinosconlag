@@ -14,7 +14,8 @@
             font-family: Arial, sans-serif;
             position: relative;
             background-color: #000; /* Fondo negro */
-            overflow-y: auto; /* Permitir scroll */
+            min-height: 100vh; /* Asegurar altura completa */
+            overflow-y: auto; /* Forzar scroll vertical */
         }
 
         /* Fondo con imagen de humo y mezcla */
@@ -27,9 +28,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15; /* Ajusta la opacidad del humo */
-            mix-blend-mode: screen; /* Mezcla la imagen con el fondo oscuro */
-            z-index: -1; /* Detrás del contenido */
+            opacity: 0.15; 
+            mix-blend-mode: screen;
+            z-index: -1;
         }
 
         /* Imagen del logo */
@@ -113,13 +114,10 @@
         </a>
         <a href="https://discord.gg/zPuPq77CcD" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" 
-                 alt="Discord" 
-                 style="width: 24px; height: 24px; filter: brightness(0.7) contrast(1.2); margin-right: 10px;">
-            Unite al Discord
+                 alt="Discord">Unite al Discord
         </a>
         <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
-            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" 
-                 style="width: 24px; height: 24px; border-radius: 50%; margin-right: 10px;">Ver Guild
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
         </a>
     </div>
 
