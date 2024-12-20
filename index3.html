@@ -69,7 +69,12 @@
             border-radius: 5px;
             font-size: 1.2em;
             transition: background 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+        }
+
+        .buttons a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
         .buttons a:hover {
@@ -77,7 +82,7 @@
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Secciones */
+        /* Nuevas Secciones */
         .section {
             display: none; /* Por defecto, ocultar todas las secciones */
             margin: 40px auto;
@@ -130,13 +135,21 @@
     
     <!-- Botones con íconos -->
     <div class="buttons">
-        <a onclick="showSection('home')">Inicio</a>
-        <a onclick="showSection('streamers')">Nuestros Streamers</a> <!-- Botón que cambia a la sección de streamers -->
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">Unite al WhatsApp</a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">Unite al Discord</a>
+        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
+        </a>
+        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
+        </a>
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
+        </a>
+        <a onclick="showSection('streamers')">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968986.png" alt="Stream Icon">Nuestros Streamers
+        </a> <!-- Nuevo botón -->
     </div>
 
-    <!-- Sección de Inicio -->
+    <!-- Sección Inicio -->
     <div class="section active" id="home">
         <h2>⚖️ Quiénes Somos</h2>
         <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
@@ -164,3 +177,4 @@
     </script>
 </body>
 </html>
+
