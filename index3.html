@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latinos con Lag - WoW Guild</title>
+    <!-- Agregar el favicon -->
+    <link rel="icon" href="https://i.ibb.co/Sw03y23/LOGO-HERMANDAD.png" type="image/png">
+    <style>
+        /* Configuración general */
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            background-color: #000; /* Fondo negro */
+            min-height: 100vh; /* Asegurar altura completa */
+            overflow-y: auto; /* Forzar scroll vertical */
+        }
+
+        /* Fondo con imagen de humo y mezcla */
+        body::before {
+            content: "";
+            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15; 
+            mix-blend-mode: screen;
+            z-index: -1;
+        }
+
+        /* Imagen del logo */
+        .logo {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        /* Botones */
+        .buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
+        }
+
+        /* Secciones */
+        .section {
+            display: none; /* Por defecto, ocultar todas las secciones */
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
+        }
+
+        .section.active {
+            display: block; /* Mostrar solo la sección activa */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        ul li a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen principal -->
+    <a href="https://ibb.co/Jnx8cGc" target="_blank">
+        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
+             alt="Latinos con Lag Logo" 
+             class="logo">
+    </a>
+    <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
+    <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
+    
+    <!-- Botones con íconos -->
+    <div class="buttons">
+        <a onclick="showSection('home')">Inicio</a>
+        <a onclick="showSection('streamers')">Nuestros Streamers</a> <!-- Botón que cambia a la sección de streamers -->
+        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">Unite al WhatsApp</a>
+        <a href="https://discord.gg/zPuPq77CcD" target="_blank">Unite al Discord</a>
+    </div>
+
+    <!-- Sección de Inicio -->
+    <div class="section active" id="home">
+        <h2>⚖️ Quiénes Somos</h2>
+        <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
+        <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
+        <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
+    </div>
+
+    <!-- Sección Streamers -->
+    <div class="section" id="streamers">
+        <h2>🎥 Nuestros Streamers</h2>
+        <p>Conoce a los streamers de nuestra comunidad que comparten contenido de <strong>World of Warcraft</strong>. ¡Sigue sus aventuras en Twitch y YouTube!</p>
+        <ul>
+            <li><strong>Streamer 1:</strong> <a href="https://twitch.tv/streamer1" target="_blank">Ver Twitch</a></li>
+            <li><strong>Streamer 2:</strong> <a href="https://twitch.tv/streamer2" target="_blank">Ver Twitch</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            // Mostrar solo la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
