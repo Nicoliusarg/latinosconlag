@@ -89,9 +89,8 @@
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Secciones */
+        /* Nuevas secciones */
         .section {
-            display: none; /* Por defecto, ocultar todas las secciones */
             margin: 40px auto;
             padding: 20px;
             background: rgba(0, 0, 0, 0.8);
@@ -100,8 +99,8 @@
             box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
         }
 
-        .section.active {
-            display: block; /* Mostrar solo la sección activa */
+        #streamers {
+            display: none;
         }
 
         h2 {
@@ -123,10 +122,10 @@
     
     <!-- Botones con íconos -->
     <div class="buttons">
-        <a onclick="showSection('home')">
+        <a href="#inicio">
             <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Inicio Icon">Inicio
         </a>
-        <a onclick="showSection('streamers')">
+        <a href="#streamers">
             <img src="https://cdn-icons-png.flaticon.com/512/685/685352.png" alt="Stream Icon">Nuestros Streamers
         </a>
         <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
@@ -138,7 +137,7 @@
     </div>
 
     <!-- Sección Inicio -->
-    <div class="section active" id="home">
+    <div class="section" id="inicio">
         <h2>⚖️ Quiénes Somos</h2>
         <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
         <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
@@ -163,12 +162,5 @@
             <li><strong>Streamer 2:</strong> <a href="https://twitch.tv/streamer2" target="_blank">Ver Twitch</a></li>
         </ul>
     </div>
-
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
