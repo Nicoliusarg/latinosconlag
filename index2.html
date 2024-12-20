@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latinos con Lag - WoW Guild</title>
+    <!-- Agregar el favicon -->
     <link rel="icon" href="https://i.ibb.co/Sw03y23/LOGO-HERMANDAD.png" type="image/png">
     <style>
         /* Configuración general */
@@ -13,8 +14,9 @@
             color: #fff;
             text-align: center;
             font-family: Arial, sans-serif;
+            position: relative;
             background-color: #000; /* Fondo negro */
-            min-height: 100vh;
+            min-height: 100vh; /* Asegurar altura completa */
             overflow-y: auto; /* Forzar scroll vertical */
         }
 
@@ -28,9 +30,30 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15;
+            opacity: 0.15; 
             mix-blend-mode: screen;
             z-index: -1;
+        }
+
+        /* Imagen del logo */
+        .logo {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            width: 80%;
         }
 
         /* Botones */
@@ -48,12 +71,18 @@
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .buttons a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
         .buttons a:hover {
             background-color: #0056b3;
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Secciones */
+        /* Nuevas Secciones */
         .section {
             margin: 40px auto;
             padding: 20px;
@@ -104,12 +133,19 @@
     <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
     
-    <!-- Botones -->
+    <!-- Botones con íconos -->
     <div class="buttons">
-        <a href="#streamers">Streamers</a> <!-- Enlace al apartado "Streamers" -->
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">Unite al WhatsApp</a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">Unite al Discord</a>
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">Ver Guild</a>
+        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
+        </a>
+        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" 
+                 alt="Discord">Unite al Discord
+        </a>
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
+        </a>
+        <a href="#streamers">Nuestros Streamers</a> <!-- Nuevo botón -->
     </div>
 
     <!-- Sección Quiénes Somos -->
@@ -120,8 +156,25 @@
         <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
     </div>
 
+    <!-- Sección Reclutamiento -->
+    <div class="section">
+        <h2>🎯 ¡Pide Acceder a la Guild!</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
+        </div>
+    </div>
+
+    <!-- Sección Estadísticas -->
+    <div class="section">
+        <h2>📊 Estadísticas de la Guild</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
+            <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
+        </div>
+    </div>
+
     <!-- Sección Streamers -->
-    <div class="section" id="streamers"> <!-- ID para redirigir -->
+    <div class="section" id="streamers"> <!-- Nuevo apartado -->
         <h2>🎥 Nuestros Streamers</h2>
         <p>Conoce a los streamers de nuestra comunidad que comparten contenido de <strong>World of Warcraft</strong>. ¡Sigue sus aventuras en Twitch y YouTube!</p>
         <ul>
