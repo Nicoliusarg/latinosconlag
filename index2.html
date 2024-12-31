@@ -82,38 +82,6 @@
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Botón NUEVO */
-        .new-button {
-            position: relative;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            display: inline-block;
-            margin: 10px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .new-button::after {
-            content: "NUEVO";
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background-color: red;
-            color: white;
-            font-size: 0.7em;
-            padding: 2px 5px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
-        }
-
-        .new-button:hover {
-            background-color: #0056b3;
-            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
-        }
-
         /* Nuevas Secciones */
         .section {
             margin: 40px auto;
@@ -153,7 +121,12 @@
         <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
             <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
         </a>
-        <a href="index3.html" class="new-button">Guía de Mazmorras Temporada 1</a>
+
+<a href="https://nicoliusarg.github.io/latinosconlag/index3.html" class="buttons" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; margin: 10px; background-color: #007BFF; color: #fff; border-radius: 5px; font-size: 1.2em; text-decoration: none; position: relative;">
+    Guía de Mazmorras Temporada 1
+    <span style="background-color: red; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 5px; position: absolute; top: -10px; right: -10px;">NUEVO</span>
+</a>
+
     </div>
 
     <!-- Sección Quiénes Somos -->
