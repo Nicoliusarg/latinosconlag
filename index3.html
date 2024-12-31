@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latinos con Lag - WoW Guild</title>
-    <!-- Agregar el favicon -->
+    <title>Guía de Mazmorras - Latinos con Lag</title>
     <link rel="icon" href="https://i.ibb.co/Sw03y23/LOGO-HERMANDAD.png" type="image/png">
     <style>
-        /* Configuración general */
         body {
             margin: 0;
             padding: 0;
             color: #fff;
             text-align: center;
             font-family: Arial, sans-serif;
-            position: relative;
-            background-color: #000; /* Fondo negro */
-            min-height: 100vh; /* Asegurar altura completa */
-            overflow-y: auto; /* Forzar scroll vertical */
+            background-color: #000;
         }
 
-        /* Fondo con imagen de humo y mezcla */
         body::before {
             content: "";
             background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
@@ -30,158 +24,98 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15; 
+            opacity: 0.15;
             mix-blend-mode: screen;
             z-index: -1;
         }
 
-        /* Imagen del logo */
-        .logo {
-            width: 300px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-top: 10px;
-            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        /* Botones */
-        .buttons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .buttons a img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
-        .buttons a:hover {
-            background-color: #0056b3;
-            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
-        }
-
-        /* Nuevas Secciones */
-        .section {
-            margin: 40px auto;
-            padding: 20px;
+        .container {
+            margin: 20px;
+            padding: 10px;
             background: rgba(0, 0, 0, 0.8);
-            width: 80%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
         }
 
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            font-size: 1.2em;
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
             margin: 10px 0;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        ul li a {
-            color: #00bfff;
-            text-decoration: none;
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        ul li a:hover {
-            text-decoration: underline;
+        iframe {
+            width: 100%;
+            height: 0;
+            transition: height 0.5s ease;
+            border: none;
+            margin-top: 10px;
         }
+
+        iframe.active {
+            height: 315px;
+        }
+
     </style>
-</head>
-<body>
-    <!-- Imagen principal -->
-    <a href="https://ibb.co/Jnx8cGc" target="_blank">
-        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
-             alt="Latinos con Lag Logo" 
-             class="logo">
-    </a>
-    <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
-    <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
-    
-    <!-- Botones con íconos -->
-    <div class="buttons">
-        <a onclick="showSection('home')">
-            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Inicio Icon">Inicio
-        </a>
-        <a onclick="showSection('streamers')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" alt="Camera Icon">Nuestros Streamers
-        </a>
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
-        </a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
-        </a>
-    </div>
-
-    <!-- Sección Inicio -->
-    <div class="section active" id="home">
-        <h2>⚖️ Quiénes Somos</h2>
-        <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
-        <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
-        <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
-        <div class="section">
-            <h2>🎯 ¡Pide Acceder a la Guild!</h2>
-            <div class="buttons">
-                <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
-            </div>
-        </div>
-        <div class="section">
-            <h2>📊 Estadísticas de la Guild</h2>
-            <div class="buttons">
-                <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
-                <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sección Streamers -->
-    <div class="section" id="streamers">
-        <h2>🎥 Nuestros Streamers</h2>
-        <p>Conoce a los streamers de nuestra comunidad que comparten contenido de <strong>World of Warcraft</strong>. ¡Sigue sus aventuras en Twitch y YouTube!</p>
-        <ul>
-            <li><strong>Streamer 1:</strong> <a href="https://twitch.tv/streamer1" target="_blank">Ver Twitch</a></li>
-            <li><strong>Streamer 2:</strong> <a href="https://twitch.tv/streamer2" target="_blank">Ver Twitch</a></li>
-        </ul>
-    </div>
-
     <script>
-        function showSection(sectionId) {
-            // Ocultar todas las secciones
-            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-            // Mostrar solo la sección seleccionada
-            document.getElementById(sectionId).classList.add('active');
+        function toggleVideo(id) {
+            const iframe = document.getElementById(id);
+            iframe.classList.toggle("active");
         }
     </script>
+</head>
+<body>
+    <h1>Guía de Mazmorras - Latinos con Lag</h1>
+
+    <div class="container">
+        <button onclick="toggleVideo('ara-kara')">Ara-Kara, Ciudad de los Ecos</button>
+        <iframe id="ara-kara" src="https://www.youtube.com/embed/F3Aml69IZhM?si=v1OE3EZm3253V71y"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('ciudad-tejida')">Ciudad Tejida</button>
+        <iframe id="ciudad-tejida" src="https://www.youtube.com/embed/ZfoVNYZwDRk?si=pBLeuPAbq4G6GJKN"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('dawnbreaker')">The Dawnbreaker</button>
+        <iframe id="dawnbreaker" src="https://www.youtube.com/embed/Rfk-c7v4tD8?si=KJIf4EJ1vlc5KB-V"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('stonevault')">The Stonevault</button>
+        <iframe id="stonevault" src="https://www.youtube.com/embed/aKGdvECrARk?si=tBNro5eknao3K6sX"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('nieblas-tirna')">Nieblas de Tirna Scithe</button>
+        <iframe id="nieblas-tirna" src="https://www.youtube.com/embed/SAFzrQ4jGd0?si=26vNoNuMaGTMAxAD"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('necrotic-wake')">Estela Necrótica</button>
+        <iframe id="necrotic-wake" src="https://www.youtube.com/embed/McuIeLZcnsw?si=LWKxP1LcSqPCcJ0j"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('boralus')">Asedio de Boralus</button>
+        <iframe id="boralus" src="https://www.youtube.com/embed/N01oFK3z3O0?si=RToeKWGeH7vwVkzn"></iframe>
+    </div>
+
+    <div class="container">
+        <button onclick="toggleVideo('grim-batol')">Grim Batol</button>
+        <iframe id="grim-batol" src="https://www.youtube.com/embed/rORzQkSY4sg?si=6UJryc_2PzSCruWp"></iframe>
+    </div>
 </body>
 </html>
