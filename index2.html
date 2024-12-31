@@ -57,30 +57,32 @@
         }
 
         /* Botones */
-        .buttons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado uniforme entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas si es necesario */
+}
+.buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px; /* Margen más pequeño para un ajuste limpio */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.buttons a:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
+}
 
-        .buttons a img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
-        .buttons a:hover {
-            background-color: #0056b3;
-            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
-        }
 
         /* Nuevas Secciones */
         .section {
@@ -110,24 +112,23 @@
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
     
     <!-- Botones con íconos -->
-    <div class="buttons">
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
-        </a>
-        <a href="https://discord.gg/6PZmTuauwF" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" 
-                 alt="Discord">Unite al Discord
-        </a>
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
-            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
-        </a>
+ <div class="buttons">
+    <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
+    </a>
+    <a href="https://discord.gg/6PZmTuauwF" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
+    </a>
+    <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+        <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
+    </a>
+    <a href="https://nicoliusarg.github.io/latinosconlag/index3.html" class="buttons">
+        Guía de Mazmorras Temporada 1
+        <span style="background-color: red; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 5px; position: absolute; top: -10px; right: -10px;">NUEVO</span>
+    </a>
+</div>
 
-        <a href="https://nicoliusarg.github.io/latinosconlag/index3.html" class="buttons" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; margin: 10px; background-color: #007BFF; color: #fff; border-radius: 5px; font-size: 1.2em; text-decoration: none; position: relative;">
-    Guía de Mazmorras Temporada 1
-    <span style="background-color: red; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 5px; position: absolute; top: -10px; right: -10px;">NUEVO</span>
-</a>
 
-    </div>
 
     <!-- Sección Quiénes Somos -->
     <div class="section">
