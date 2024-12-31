@@ -29,30 +29,41 @@
             z-index: -1;
         }
 
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
+        }
+
         .container {
-            margin: 20px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
+            margin: 20px auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 190, 255, 0.5);
+            max-width: 800px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
         }
 
         button {
             background-color: #007BFF;
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin: 10px 0;
-            font-size: 1.2em;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         button:hover {
             background-color: #0056b3;
-            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
+            box-shadow: 0 0 20px rgba(0, 190, 255, 1);
         }
 
         iframe {
@@ -60,11 +71,13 @@
             height: 0;
             transition: height 0.5s ease;
             border: none;
-            margin-top: 10px;
+            margin-top: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 190, 255, 0.5);
         }
 
         iframe.active {
-            height: 315px;
+            height: 450px;
         }
 
     </style>
@@ -119,3 +132,4 @@
     </div>
 </body>
 </html>
+
