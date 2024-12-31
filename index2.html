@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latinos con Lag - WoW Guild</title>
-    <!-- Agregar el favicon -->
     <link rel="icon" href="https://i.ibb.co/Sw03y23/LOGO-HERMANDAD.png" type="image/png">
     <style>
         /* Configuración general */
@@ -14,23 +13,21 @@
             color: #fff;
             text-align: center;
             font-family: Arial, sans-serif;
-            position: relative;
-            background-color: #000; /* Fondo negro */
-            min-height: 100vh; /* Asegurar altura completa */
-            overflow-y: auto; /* Forzar scroll vertical */
+            background-color: #000;
+            min-height: 100vh;
         }
 
         /* Fondo con imagen de humo y mezcla */
         body::before {
             content: "";
-            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=b0acdc8cf90e5a2a39a2899a1489f2dc') no-repeat center center fixed;
+            background: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s113-ak-5716_3.jpg') no-repeat center center fixed;
             background-size: cover;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.15; 
+            opacity: 0.15;
             mix-blend-mode: screen;
             z-index: -1;
         }
@@ -38,7 +35,6 @@
         /* Imagen del logo */
         .logo {
             width: 300px;
-            height: auto;
             margin-top: 20px;
             border-radius: 15px;
             box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
@@ -56,35 +52,49 @@
             width: 80%;
         }
 
-        /* Botones */
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Espaciado uniforme entre los botones */
-    flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas si es necesario */
-}
-.buttons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px; /* Margen más pequeño para un ajuste limpio */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
-.buttons a:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
-}
+        /* Contenedor de botones */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
+        /* Estilo de los botones individuales */
+        .buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            min-width: 200px; /* Asegurar ancho uniforme */
+            text-align: center;
+            position: relative;
+        }
 
-        /* Nuevas Secciones */
+        .buttons a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
+        }
+
+        /* Indicador de "NUEVO" */
+        .buttons a span {
+            background-color: red;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 5px;
+            border-radius: 5px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        /* Secciones generales */
         .section {
             margin: 40px auto;
             padding: 20px;
@@ -96,7 +106,6 @@
 
         h2 {
             font-size: 2.5em;
-            margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
         }
     </style>
@@ -104,55 +113,26 @@
 <body>
     <!-- Imagen principal -->
     <a href="https://ibb.co/Jnx8cGc" target="_blank">
-        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" 
-             alt="Latinos con Lag Logo" 
-             class="logo">
+        <img src="https://i.ibb.co/cJbRyZy/46728ad6-1130-45aa-8840-1ba8b6c35d73.jpg" alt="Latinos con Lag Logo" class="logo">
     </a>
     <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
     
     <!-- Botones con íconos -->
- <div class="buttons">
-    <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
-    </a>
-    <a href="https://discord.gg/6PZmTuauwF" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
-    </a>
-    <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
-        <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
-    </a>
-    <a href="https://nicoliusarg.github.io/latinosconlag/index3.html" class="buttons">
-        Guía de Mazmorras Temporada 1
-        <span style="background-color: red; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 5px; position: absolute; top: -10px; right: -10px;">NUEVO</span>
-    </a>
-</div>
-
-
-
-    <!-- Sección Quiénes Somos -->
-    <div class="section">
-        <h2>⚖️ Quiénes Somos</h2>
-        <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
-        <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
-        <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
-    </div>
-
-    <!-- Sección Reclutamiento -->
-    <div class="section">
-        <h2>🎯 ¡Pide Acceder a la Guild!</h2>
-        <div class="buttons">
-            <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
-        </div>
-    </div>
-
-    <!-- Sección Estadísticas -->
-    <div class="section">
-        <h2>📊 Estadísticas de la Guild</h2>
-        <div class="buttons">
-            <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
-            <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
-        </div>
+    <div class="buttons">
+        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Unite al WhatsApp
+        </a>
+        <a href="https://discord.gg/6PZmTuauwF" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">Unite al Discord
+        </a>
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/us/ragnaros/latinos-con-lag?page=1&sort-column=0&sort-descending=false" target="_blank">
+            <img src="https://i.ibb.co/khL4dfH/sqe.jpg" alt="Guild Icon" style="border-radius: 50%;">Ver Guild
+        </a>
+        <a href="https://nicoliusarg.github.io/latinosconlag/index3.html">
+            Guía de Mazmorras Temporada 1
+            <span>NUEVO</span>
+        </a>
     </div>
 </body>
 </html>
