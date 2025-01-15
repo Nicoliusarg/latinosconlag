@@ -69,7 +69,12 @@
             border-radius: 5px;
             font-size: 1.2em;
             transition: background 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+        }
+
+        .buttons a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
         .buttons a:hover {
@@ -77,9 +82,8 @@
             box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);
         }
 
-        /* Secciones */
+        /* Nuevas Secciones */
         .section {
-            display: none; /* Por defecto, ocultar todas las secciones */
             margin: 40px auto;
             padding: 20px;
             background: rgba(0, 0, 0, 0.8);
@@ -88,33 +92,10 @@
             box-shadow: 0 0 10px rgba(0, 190, 255, 0.5);
         }
 
-        .section.active {
-            display: block; /* Mostrar solo la sección activa */
-        }
-
         h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(0, 190, 255, 0.8);
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        ul li a {
-            color: #00bfff;
-            text-decoration: none;
-        }
-
-        ul li a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -128,39 +109,44 @@
     <h1>⚔️ ¡Bienvenidos a Latinos con Lag! 🛡️</h1>
     <p>Somos una comunidad apasionada de <strong>World of Warcraft Retail</strong> que disfruta del PvE, PvP, monturas, logros y mucho más. ¡Unite a nuestra guild y sé parte de la aventura!</p>
     
-    <!-- Botones con íconos -->
-    <div class="buttons">
-        <a onclick="showSection('home')">Inicio</a>
-        <a onclick="showSection('streamers')">Nuestros Streamers</a> <!-- Botón que cambia a la sección de streamers -->
-        <a href="https://chat.whatsapp.com/KXYnUgo3Y6QGVkn8x9FChh" target="_blank">Unite al WhatsApp</a>
-        <a href="https://discord.gg/zPuPq77CcD" target="_blank">Unite al Discord</a>
+    <!-- Sección de Video -->
+    <div class="section">
+        <h2>🎥 Video Informativo</h2>
+        <p>Revisa nuestra información semanal aquí:</p>
+        <div id="video-container">
+            <iframe
+                src="https://drive.google.com/file/d/1OOiQ-fb1HLla6FgZxhUgYJYJYkZiGPvHRZ/preview"
+                width="640"
+                height="360"
+                allow="autoplay"
+                style="border: none; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 190, 255, 0.8);">
+            </iframe>
+        </div>
     </div>
 
-    <!-- Sección de Inicio -->
-    <div class="section active" id="home">
+    <!-- Sección Quiénes Somos -->
+    <div class="section">
         <h2>⚖️ Quiénes Somos</h2>
         <p>Creamos <strong>Latinos con Lag</strong> con la idea de unirnos y disfrutar <em>este hermoso juego</em> en la mejor compañía.</p>
         <p>Nos orientamos a <strong>todo tipo de público</strong>, especialmente a quienes desean divertirse, pertenecer y crear contenido.</p>
         <p>Lo único que pedimos es <strong>respeto</strong> y no tener toxicidad. ¡Sigamos disfrutando juntos! ⚔️</p>
     </div>
 
-    <!-- Sección Streamers -->
-    <div class="section" id="streamers">
-        <h2>🎥 Nuestros Streamers</h2>
-        <p>Conoce a los streamers de nuestra comunidad que comparten contenido de <strong>World of Warcraft</strong>. ¡Sigue sus aventuras en Twitch y YouTube!</p>
-        <ul>
-            <li><strong>Streamer 1:</strong> <a href="https://twitch.tv/streamer1" target="_blank">Ver Twitch</a></li>
-            <li><strong>Streamer 2:</strong> <a href="https://twitch.tv/streamer2" target="_blank">Ver Twitch</a></li>
-        </ul>
+    <!-- Sección Reclutamiento -->
+    <div class="section">
+        <h2>🎯 ¡Pide Acceder a la Guild!</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/recruitment" target="_blank">Aplicar Ahora</a>
+        </div>
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            // Ocultar todas las secciones
-            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-            // Mostrar solo la sección seleccionada
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
+    <!-- Sección Estadísticas -->
+    <div class="section">
+        <h2>📊 Estadísticas de la Guild</h2>
+        <div class="buttons">
+            <a href="https://guildsofwow.com/latinos-con-lag/guild-report" target="_blank">Ver Estadísticas</a>
+            <a href="https://guildsofwow.com/latinos-con-lag" target="_blank">Ver Detalle de Guild</a>
+        </div>
+    </div>
 </body>
 </html>
